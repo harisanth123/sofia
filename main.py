@@ -7,7 +7,7 @@ engine = p.init()#---------------------------------------------------instance to
 
 
 rate = engine.getProperty('rate')# ----------------------------------speed of voice
-engine.setProperty('rate',170)
+engine.setProperty('rate',175)
 
 voices = engine.getProperty('voices')# ------------------------------to check voice avilable
 engine.setProperty('voice',voices[0].id)
@@ -18,7 +18,7 @@ def speak(text):
 
 r = sr.Recognizer()
 
-speak("hello i am your assistant.")
+speak("hello i am sofia")
 
 
 
@@ -29,6 +29,6 @@ with sr.Microphone() as source:
     audio = r.listen(source)#----------------------------------------listen to audio 
     text = r.recognize_google(audio)#--------------------------------connect to google api
 
-if " what " and "you" in text:
-    speak("i am having a good day sir")
+if " what " and "about" and "you" in text:
+    speak("i am also having a good day sir")
 speak("what can i do for you??")
