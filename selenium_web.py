@@ -22,5 +22,3 @@ class inflow():
         while(True):#------------------------------------------------------------------------------->to stop automatic close of web browser
             pass
 
-assist = inflow()
-assist.get_info("cars")#---------------------------------------------------------------------------->to enter the element to search
