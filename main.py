@@ -30,6 +30,7 @@ with sr.Microphone() as source:
     audio = r.listen(source) 
 
     text = r.recognize_google(audio)
+    
 
 if " what " and "about" and "you" in text:
     speak("i am also having a good day sir.")
@@ -42,6 +43,7 @@ with sr.Microphone() as source:
     print("listening..")
     audio = r.listen(source)
     text2 = r.recognize_google(audio)
+    print(text2)
 
 if "information" in text2:
     speak("what information do you need ?")
@@ -56,7 +58,7 @@ if "information" in text2:
     assist = wiki_data()
     assist.get_info(info)
      
-elif "youtube" and "video" in text2:
+elif "YouTube" and "video" in text2:
     speak("which vedio do you need to watch?")
     with sr.Microphone() as source:
         r.energy_threshold=10000
