@@ -1,5 +1,8 @@
 import requests
-api_address= ('https://newsapi.org/v2/top-headlines?country=us&apiKey=54703bd8678b43b4ab72820379ca7fac')
+import os
+
+key = os.environ.get('news_key')
+api_address= ('https://newsapi.org/v2/top-headlines?country=us&apiKey=' + key )
 json_data = requests.get(api_address).json()
 
 ar=[]
