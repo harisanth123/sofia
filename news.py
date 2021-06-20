@@ -7,10 +7,8 @@ json_data = requests.get(api_address).json()
 
 ar=[]
 
-def news():
+def get_news():
     for i in range(3):
        ar.append("Number "+str(i+1) +" "+ json_data["articles"][i]["title"]+".")
     return ar
 
-arr=news()
-print(arr)
