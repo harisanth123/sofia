@@ -1,5 +1,4 @@
 
-from random import choice
 intro_list= [
   "Hi there, sir looking forward to see you",
   "Greetings sir, welcome back",
@@ -53,7 +52,7 @@ morning_data=[
   "Just the thought of you brightens up my morning. Good morning!",
   "Just like how a beautiful morning is incomplete without its orange hue, my morning is incomplete without texting you. Good morning!",
   " Good morning, sir. Here is my morning tip: you need no makeup. You will be messing with perfection. Love you!",
-  " If it were up to me to rearrange the alphabets, I would keep U & I together. Good Morning!",
+  "If it were up to me to rearrange the alphabets, I would keep U & I together. Good Morning!",
   "Begin this day with a cup full of positive thoughts, a spoonful of energy, and a jar full of love. Have a beautiful day. Good morning!",
   "You know that moment when you wake up in the morning rejuvenated and full of energy? Yeah, me neither.",
   "I could totally be a morning person. Only if mornings happened at noon. Good morning!",
@@ -61,7 +60,30 @@ morning_data=[
   "I believe there should be a better way to start each day – instead of waking up every morning",
   "As the day begins, remember that I am your friend…you’re welcome!",
   "Someday, you will be a morning person! But, not today. Go back to sleep!"
-  ""
 ]
+afternoon_data =[
+  "Have a good afternoon and a great day! sir",
+  "I am always thinking about you. Have a great afternoon sir",
+  "You are as bright as the afternoon sun",
+  "The afternoon is when the day starts to slow down. Enjoy yourself!",
+  "Enjoy this time of day and the blessings that it brings. ",
+  "Here’s a wish for a fun afternoon and the gentle breeze that comes with it",
+  "Half of the day is over; have a marvelous afternoon and enjoy the rest of the day! ",
+  "Good morning, afternoon, evening, and night. The day is more complete with you.",
+  "May this afternoon bring you delightful surprises.",
+  "Wishing you a happy day and a fabulous afternoon!",
+  "May this beautiful afternoon fill your heart with happiness!",
+  "I can only wish you all the best all day long.",
+  "Today, there will be a beautiful sunset after you have a good afternoon!",
+  "I would like to wish you a good afternoon and an even better evening ",
+  "May your afternoon be filled with light, love, and happiness.",
+  "Leave me a smile just warm enough to spend a million golden afternoons in."
+  "Under certain circumstances there are few hours in life more agreeable than the hour dedicated to the ceremony known as afternoon tea",
+  "Be bright like the afternoon sun and let everyone who sees you feel inspired by all the great things you do. You have one life here on earth. Make it count in whatever way you can.",
+  "You could get a simple idea one afternoon that could completely change your life. Great innovators just needed one idea to change everything. Keep striving and you will reach success. ",
+  "I’m never any good in the morning. It is only after four in the afternoon that I get going"
+
+]
+
 
 

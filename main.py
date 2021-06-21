@@ -26,8 +26,8 @@ def speak(text):
 
 r = sr.Recognizer()
 
-print("my name is sofia.")
-speak("my name is sofia.")
+print("hey! i am sofia.")
+speak("hey! i am sofia.")
 
 
 with sr.Microphone() as source:
@@ -48,8 +48,9 @@ elif "good" in text:
         print(morning)
         speak(morning)
     elif 12 <= currentTime.hour < 18:
-        print('Good afternoon.')
-        speak('Good afternoon')
+        afternoon = random.choice(afternoon_data)
+        print('afternoon')
+        speak('afternoon')
     else:
         print('good evening.')
         speak('good evening.')
