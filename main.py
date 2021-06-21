@@ -2,6 +2,8 @@
 import pyttsx3 as p
 import speech_recognition as sr
 import random
+import datetime
+
 from random import choice
 from wiki import *
 from yt import *
@@ -9,7 +11,8 @@ from news import *
 from data import *
 
 engine = p.init()
-
+currentTime = datetime.datetime.now()
+currentTime.hour
 
 rate = engine.getProperty('rate')
 engine.setProperty('rate',175)
@@ -23,8 +26,8 @@ def speak(text):
 
 r = sr.Recognizer()
 
-speak("hello i am sofia. your Personal assistant ")
-
+print("my name is sofia.")
+speak("my name is sofia.")
 
 
 with sr.Microphone() as source:
@@ -34,20 +37,30 @@ with sr.Microphone() as source:
     audio = r.listen(source) 
     text = r.recognize_google(audio)
     text = text.lower()
+    
+if " what " and "about" and "you" in text:
+    print("i am also having a good day sir.")
+    speak("i am also having a good day sir.")
 
-if "hello" or "hai" or "hey"  in text:
+elif "good" in text:
+    if currentTime.hour < 12:
+        morning = random.choice(morning_data)
+        print(morning)
+        speak(morning)
+    elif 12 <= currentTime.hour < 18:
+        print('Good afternoon.')
+        speak('Good afternoon')
+    else:
+        print('good evening.')
+        speak('good evening.')
+
+else:
     intro = random.choice(intro_list)
     print(intro)
-    speak(intro)
-
-if "Good morning" or "Good afternoon" or "Good evening" in text:
-    print(text)
-    speak(text)
+    speak(intro)    
 
 
-if " what " and "about" and "you" in text:
-    speak("i am also having a good day sir.")
-    print("i am also having a good day sir.")
+print("what can i do for you??")
 speak("what can i do for you??")
 
 with sr.Microphone() as source:
@@ -88,7 +101,10 @@ elif "YouTube" and "video" in text2:
     assist.get_vedio(vedio) 
 
 elif "news" in text2:
+    print("sure sir, i will get for you ")
+    speak("sure sir, i will get for you ")
     arr=get_news()
     for i in range(len(arr)):
         print(arr[i])
         speak(arr[i])
+

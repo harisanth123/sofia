@@ -7,3 +7,4 @@ selenium---------------------->3.141.0
 chromedriver------------------>91.0.4472.101 (depent on your chrome version)
 requests---------------------->2.25.1
 python-dotenv----------------->0.17.1
+randfacts--------------------->0.5.1
