@@ -23,7 +23,6 @@ intro_list= [
   "What’s up with you, old soul? Wanna chat?",
   "Welcome to the club, boss!",
   "Hey mistaa, how do you do?",
-  "What’s new? Tell me everything!",
   "Namaste! How long has it been, dost?",
   "Hey Einstein, still cracking the old theory?",
   "What’s smokin’? Tell me everything!",
@@ -61,6 +60,7 @@ morning_data=[
   "As the day begins, remember that I am your friend…you’re welcome!",
   "Someday, you will be a morning person! But, not today. Go back to sleep!"
 ]
+
 afternoon_data =[
   "Have a good afternoon and a great day! sir",
   "I am always thinking about you. Have a great afternoon sir",
@@ -82,8 +82,32 @@ afternoon_data =[
   "Be bright like the afternoon sun and let everyone who sees you feel inspired by all the great things you do. You have one life here on earth. Make it count in whatever way you can.",
   "You could get a simple idea one afternoon that could completely change your life. Great innovators just needed one idea to change everything. Keep striving and you will reach success. ",
   "I’m never any good in the morning. It is only after four in the afternoon that I get going"
-
 ]
 
-
-
+evening_data = [
+  "Good evening! I hope you had a good and productive day.",
+  "No matter how bad your day has been, the beauty of the setting sun will make everything serene. Good evening.",
+  "May the setting sun take down all your sufferings with it and make you hopeful for a new day. Good evening!",
+  "It doesn’t matter how hectic your day was, you can’t help admiring the beauty of this evening. I hope you are having a good time right now! Good evening!",
+  "Whether your day was good or bad, it has come to an end. Good evening and good luck for tomorrow.",
+  "Evening is a good time to look back at your day and think about all the things that you have done. Enjoy your evening with positive thoughts.",
+  "Happiness can’t be behind sorrow, It is your choice to make a better tomorrow, Enjoy this beautiful day with a lovely smile, Good evening!",
+  "Evenings are your chance to forget the mistakes you made during the day, so for the sweetest of dreams, you can have the way. Good evening!",
+  "Evening is a good time to look back at the day and think about all the good things you have done. I wish you an evening so full of satisfaction and inspiration",
+  "Good evening my friend, take a sip of your coffee and forget the troubles of the day.",
+  "It’s a perfect time to get rid of your worries and make yourself prepared for what’s coming tomorrow. Make this evening the beginning of a wonderful journey.",
+  "The sun sets every evening with a promise to rise up once again at every dawn. Evenings are so full of hope and inspiration. Wishing you a very wonderful evening!",
+  "Look at the sunset and then smile, Look at the horizon and smile, Enjoy this beautiful evening today, And have a nice time, Good evening to you!",
+  "I hope you are having a refreshing evening as I am having here thinking of you. Good evening, sir",
+  "Sometimes the best thing you can do is not think no wonder, not imagine and not obsess. Just breathe and have faith that everything will work out for the best. Good evening!",
+  "Evening is the time for peace, Where there is no tension to cease, On this evening, I want to wish you, That you have a good evening!",
+  "I know today was hard for you but I also know that tomorrow will come with new hopes and aspirations. Good evening sir, keep fighting.",
+  "You don’t need beautiful weather to enjoy this evening. What you need is to kill a lot of mosquitoes so I can relax and have my coffee in peace! Good evening!",
+  "Evening is special Not because it is the coolest time of the day, But, it lets you reflect on your day and forget your yesterday, Good evening!",
+  "Evenings are always full of motivations and a new chance to look forward to the good times. So, never waste it sir. Have a warm evening.",
+  "The evening’s the best part of the day. You’ve done your day’s work. Now you can put your feet up and enjoy it",
+  "Come in the evening, or come in the morning; Come when you’re looked for, or come without warning",
+  "Stop stressing about your sore day and enjoy the cool breeze of the fascinating evening. Eat lots of good food and cherish your evening well. Have a great time, sir",
+  "Follow the rhythm of your heart, Heart takes you to the destination, Where your goodness dwells, Have a happy evening",
+  "",
+]
