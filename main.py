@@ -9,6 +9,7 @@ from wiki import *
 from yt import *
 from news import *
 from data import *
+from joke import *
 
 engine = p.init()
 currentTime = datetime.datetime.now()
@@ -26,8 +27,8 @@ def speak(text):
 
 r = sr.Recognizer()
 
-print("its me sofia. your personal assistent")
-speak("its me sofia. your personal assistent")
+print("i am is sofia. your personal assistent")
+speak("i am sofia. your personal assistent")
 
 
 with sr.Microphone() as source:
@@ -110,3 +111,11 @@ elif "news" in text2:
         print(arr[i])
         speak(arr[i])
 
+elif "joke" or "jokes" in text2:
+    print("ok sir let me find a joke for you")
+    speak("ok sir let me find a joke for you")
+    arr=joke()
+    print(arr[0])
+    speak(arr[0])
+    print(arr[1])
+    speak(arr[1])
