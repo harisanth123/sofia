@@ -12,8 +12,6 @@ from data import *
 from joke import *
 
 engine = p.init()
-currentTime = datetime.datetime.now()
-currentTime.hour
 
 rate = engine.getProperty('rate')
 engine.setProperty('rate',175)
@@ -25,10 +23,19 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
+def time():
+    hour=int(datetime.datetime.now().hour)
+    if hour>0 and hour<12:
+        return("morning")
+    elif hour>=12 and hour<16:
+        return("afternoon")
+    else:
+        return("evening")
+
 r = sr.Recognizer()
 
-print("i am is sofia. your personal assistent")
-speak("i am sofia. your personal assistent")
+print("hello sir, good " + time() +" ,i am  sofia. your personal assistent")
+speak("hello sir, good " + time() +" , iam sofia.  your personal assistent")
 
 
 with sr.Microphone() as source:
@@ -44,11 +51,11 @@ if " what " and "about" and "you" in text:
     speak("i am also having a good day sir.")
 
 elif "good" in text:
-    if currentTime.hour < 12:
+    if time()== "morning":
         morning = random.choice(morning_data)
         print(morning)
         speak(morning)
-    elif 12 <= currentTime.hour < 18:
+    elif time()=="afternoon" :
         afternoon = random.choice(afternoon_data)
         print(afternoon)
         speak(afternoon)
