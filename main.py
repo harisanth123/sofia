@@ -91,8 +91,8 @@ if "information" in text2:
         print("listening...")
         audio = r.listen(source)
         info = r.recognize_google(audio)
-    speak("searching {} in wikipedia".format(info))
     print("searching {} in wikipedia".format(info))
+    speak("searching {} in wikipedia".format(info))
     assist = wiki_data()
     assist.get_info(info)
      
