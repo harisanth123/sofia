@@ -19,6 +19,9 @@ class wiki_data():
         
         enter = self.driver.find_element_by_xpath('//*[@id="search-form"]/fieldset/button ') 
         enter.click()
+        
         while(True):
           pass
+    
+
 
