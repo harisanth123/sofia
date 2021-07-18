@@ -128,10 +128,3 @@ elif "joke" or "jokes" in text2:
     print(arr[1])
     speak(arr[1])
 
-#elif "internet" and "speed" in text2:
-    print("please wait. let me check your network speed")
-    speak("please wait. let me check your network speed")
-    print("loading server list")
-    speak("loading server list")
-    #print(f"Found:{best['host']} located in{best['country']}")
-    #speak(f"Found:{best['host']} located in{best['country']}")
