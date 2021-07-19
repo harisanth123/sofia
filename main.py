@@ -1,4 +1,4 @@
-from typing import Text
+#libraries
 import pyttsx3 as p
 import speech_recognition as sr
 import random
@@ -33,28 +33,25 @@ def time():
     else:
         return("evening")
 
-def voice():
+r = sr.Recognizer()
+
+print("hello sir, good " + time() +" ,i am  sofia. your personal assistent")
+speak("hello sir, good " + time() +" , iam sofia.  your personal assistent")
+
+
+with sr.Microphone() as source:
+    r.energy_threshold=10000
+    r.adjust_for_ambient_noise(source,1.2)
+    print("listening.")
+    audio = r.listen(source) 
+    text = r.recognize_google(audio)
+    text = text.lower()
     
-    r = sr.Recognizer()
-
-    with sr.Microphone() as source:
-        r.energy_threshold=10000
-        r.adjust_for_ambient_noise(source,1.2)
-        print("listening.")
-        audio = r.listen(source) 
-        text = r.recognize_google(audio)
-        text = text.lower()
-        return text
-
-print("hello sir, good " + time() +" ,i am sofia. your personal assistent")
-speak("hello sir, good " + time() +" ,i am sofia. your personal assistent")
-
-responce = voice()
-if " what " and "about" and "you" in responce:
+if " what " and "about" and "you" in text:
     print("i am also having a good day sir.")
     speak("i am also having a good day sir.")
 
-elif "good" in responce:
+elif "good" in text:
     if time()== "morning":
         morning = random.choice(morning_data)
         print(morning)
@@ -77,39 +74,44 @@ else:
 print("what can i do for you??")
 speak("what can i do for you??")
 
-responce = voice()
+with sr.Microphone() as source:
+    r.energy_threshold=10000
+    r.adjust_for_ambient_noise(source,1.2)
+    print("listening..")
+    audio = r.listen(source)
+    text2 = r.recognize_google(audio)
+    text2 = text2.lower()
+    
 
-if "information" in responce:
+if "information" in text2:
     print("what information do you need ?")
     speak("what information do you need ?")
-    data = voice()
-    print("do you wish to open in web browser?")
-    speak("do you wish to open in web browser?")
-    browser = voice()
-    if browser == "yes":
-        print("searching {} in wikipedia".format(data))
-        speak("searching {} in wikipedia".format(data))
-        assist = wiki_data()
-        assist.get_info(responce)
-    else:
-        print("searching {} in wikipedia".format(data))
-        speak("searching {} in wikipedia".format(data))
-        assist = wiki_data()
-        assist.give_info(responce)
-        
-
-
-                 
-elif "YouTube" and "video" in responce:
+    with sr.Microphone() as source:
+        r.energy_threshold=10000
+        r.adjust_for_ambient_noise(source,1.2)
+        print("listening...")
+        audio = r.listen(source)
+        info = r.recognize_google(audio)
+    print("searching {} in wikipedia".format(info))
+    speak("searching {} in wikipedia".format(info))
+    assist = wiki_data()
+    assist.get_info(info)
+     
+elif "YouTube" and "video" in text2:
     print("which vedio do you need to watch?")
     speak("which vedio do you need to watch?")
-    responce = voice()
-    print("searching {} in youtube".format(responce))
-    speak("searching {} in youtube".format(responce))
+    with sr.Microphone() as source:
+        r.energy_threshold=10000
+        r.adjust_for_ambient_noise(source,1.2)
+        print("listening...")
+        audio = r.listen(source)
+        vedio = r.recognize_google(audio)
+    print("searching {} in youtube".format(vedio))
+    speak("searching {} in youtube".format(vedio))
     assist = yt_data()
-    assist.get_vedio(responce) 
+    assist.get_vedio(vedio) 
 
-elif "news" in responce:
+elif "news" in text2:
     print("sure sir, i will get for you ")
     speak("sure sir, i will get for you ")
     arr=get_news()
@@ -117,7 +119,7 @@ elif "news" in responce:
         print(arr[i])
         speak(arr[i])
 
-elif "joke" or "jokes" in responce:
+elif "joke" or "jokes" in text2:
     print("ok sir let me find a joke for you")
     speak("ok sir let me find a joke for you")
     arr=joke()
