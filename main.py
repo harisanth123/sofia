@@ -82,12 +82,24 @@ responce = voice()
 if "information" in responce:
     print("what information do you need ?")
     speak("what information do you need ?")
-    responce = voice()
-    print("searching {} in wikipedia".format(responce))
-    speak("searching {} in wikipedia".format(responce))
-    assist = wiki_data()
-    assist.get_info(responce)
-         
+    data = voice()
+    print("do you wish to open in web browser?")
+    speak("do you wish to open in web browser?")
+    browser = voice()
+    if browser == "yes":
+        print("searching {} in wikipedia".format(data))
+        speak("searching {} in wikipedia".format(data))
+        assist = wiki_data()
+        assist.get_info(responce)
+    else:
+        print("searching {} in wikipedia".format(data))
+        speak("searching {} in wikipedia".format(data))
+        assist = wiki_data()
+        assist.give_info(responce)
+        
+
+
+                 
 elif "YouTube" and "video" in responce:
     print("which vedio do you need to watch?")
     speak("which vedio do you need to watch?")
