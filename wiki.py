@@ -16,5 +16,9 @@ class wiki_data():
         enter = self.driver.find_element_by_xpath('//*[@id="search-form"]/fieldset/button ') 
         enter.click()
         while(True):
-          pass
-
+            pass
+    def give_info(query):
+        data = wikipedia.summary(query, sentences=2)
+        return data
+    
+        

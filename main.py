@@ -3,6 +3,8 @@ import pyttsx3 as p
 import speech_recognition as sr
 import random
 import datetime
+import wikipedia 
+
 
 from random import choice
 from wiki import *
@@ -85,11 +87,21 @@ if "information" in voices:
     print("what information do you need ?")
     speak("what information do you need ?")
     info = voice()
-    print("searching {} in wikipedia".format(info))
-    speak("searching {} in wikipedia".format(info))
-    assist = wiki_data()
-    assist.get_info(info)
-     
+    print("do you wish to open wikipedia in browser")
+    speak("do you wish to open wikipedia in browser")
+    wiki = voice()
+    if wiki == "yes":
+        print("searching {} in wikipedia".format(info))
+        speak("searching {} in wikipedia".format(info))
+        assist = wiki_data()
+        assist.get_info(info)
+    else:
+        print("geting information about {} from wikipedia".format(info))
+        speak("geting information about {} from wikipedia".format(info))
+        wiki_data = wikipedia.summary("info", sentences=2)
+        print(wiki_data)
+        speak(wiki_data)        
+          
 elif "YouTube" and "video" in voices:
     print("which vedio do you need to watch?")
     speak("which vedio do you need to watch?")
