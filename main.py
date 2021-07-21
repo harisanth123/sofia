@@ -120,8 +120,8 @@ elif "news" in voices:
         speak(arr[i])
 
 elif "joke" or "jokes" in voices:
-    print("ok sir let me find a joke for you")
-    speak("ok sir let me find a joke for you")
+    print("ok sir let me find a joke for you...")
+    speak("ok sir let me find a joke for you...")
     arr=joke()
     print(arr[0])
     speak(arr[0])
