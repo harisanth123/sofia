@@ -1,3 +1,0 @@
-#https://accounts.spotify.com/authorize?client_id=bd51ebd3520d4907b8021bcca74acedf&response_type=code&redirect_uri=https%3A%2F%2Fgithub.com%2Fharisanth123%2Fsofia&scope=playlist-modify-public%20playlist-modify-privite
-
-#curl -H "Authorization: Basic ZjM...zE=" -d grant_type=authorization_code -d code=MQCbtKe...44KN -d redirect_uri=https%3A%2F%2Fwww.foo.com%2Fauth https://accounts.spotify.com/api/token

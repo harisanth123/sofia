@@ -1,9 +1,9 @@
 import pyttsx3 as p
 import speech_recognition as sr
 import random
-import datetime
 import wikipedia 
 
+from utils import *
 
 from random import choice
 from wiki import *
@@ -13,26 +13,16 @@ from data import *
 from joke import *
 
 
-engine = p.init()
 
+engine = p.init()
 rate = engine.getProperty('rate')
 engine.setProperty('rate',175)
-
 voices = engine.getProperty('voices')
 engine.setProperty('voice',voices[0].id)
 
 def speak(text):
     engine.say(text)
     engine.runAndWait()
-
-def time():
-    hour=int(datetime.datetime.now().hour)
-    if hour>0 and hour<12:
-        return("morning")
-    elif hour>=12 and hour<16:
-        return("afternoon")
-    else:
-        return("evening")
 
 def voice():
     r = sr.Recognizer()
@@ -52,8 +42,8 @@ def voice():
             speak(v_error)
             return voice()
             
-print("hello, good " + time() +" ,i am sofia.")
-speak("hello, good " + time() +" ,i am sofia.")
+print("hello sir, good " + time() +" ,i am sofia.")
+speak("hello sir, good " + time() +" ,i am sofia.")
 print("what can i do for you??")
 speak("what can i do for you??")
 
@@ -65,18 +55,9 @@ if " what " and "about" and "you" in voices:
     speak("i am also having a good day sir.")
 
 elif "good" in voices:
-    if time()== "morning":
-        morning = random.choice(morning_data)
-        print(morning)
-        speak(morning)
-    elif time()=="afternoon" :
-        afternoon = random.choice(afternoon_data)
-        print(afternoon)
-        speak(afternoon)
-    else:
-        evening = random.choice(evening_data)
-        print(evening)
-        speak(evening)
+    wish = wishing()
+    print(wish)
+    speak(wish)
 
 else:
     intro = random.choice(intro_list)
@@ -84,8 +65,8 @@ else:
     speak(intro)    
 
 
-print("what can i do for you??")
-speak("what can i do for you??")
+print("how can i help you")
+speak("how can i help you")
 
 voices = voice()
 
