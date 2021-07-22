@@ -98,7 +98,7 @@ if "information" in voices:
     else:
         print("geting information about {} from wikipedia".format(info))
         speak("geting information about {} from wikipedia".format(info))
-        wiki_data = wikipedia.summary("info", sentences=2)
+        wiki_data = wikipedia.summary(info, sentences=2)
         print(wiki_data)
         speak(wiki_data)        
           

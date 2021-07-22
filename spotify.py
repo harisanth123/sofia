@@ -1,24 +1,3 @@
-from selenium import webdriver
+#https://accounts.spotify.com/authorize?client_id=bd51ebd3520d4907b8021bcca74acedf&response_type=code&redirect_uri=https%3A%2F%2Fgithub.com%2Fharisanth123%2Fsofia&scope=playlist-modify-public%20playlist-modify-privite
 
-
-class music():
-    def __init__(self):
-        self.driver = webdriver.Chrome(executable_path="C:\chromedriver_win32\chromedriver.exe") 
-    
-    
-    def get_info(self,query):
-        self.query = query
-        self.driver.get(url='https://open.spotify.com/search')
-        search = self.driver.find_element_by_xpath(' //*[@id="main"]/div/div[2]/div[1]/header/div[3]/div/div/form/input ') 
-        search.click()
-        search.send_keys(self.query)
-        search.submit()
-        select = self.driver.find_element_by_xpath('//*[@id="searchPage"]/div/div/section[1]/div[2]/div/div/div/div[3]/button')
-        select.click()
-        
-        
-        while(True):
-            pass
-
-assist = music()
-assist.get_info("closer")
+#curl -H "Authorization: Basic ZjM...zE=" -d grant_type=authorization_code -d code=MQCbtKe...44KN -d redirect_uri=https%3A%2F%2Fwww.foo.com%2Fauth https://accounts.spotify.com/api/token

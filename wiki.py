@@ -17,8 +17,6 @@ class wiki_data():
         enter.click()
         while(True):
             pass
-    def give_info(query):
-        data = wikipedia.summary(query, sentences=2)
-        return data
-    
+
+
         
