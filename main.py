@@ -1,4 +1,3 @@
-#libraries
 import pyttsx3 as p
 import speech_recognition as sr
 import random
@@ -42,11 +41,20 @@ def voice():
         r.adjust_for_ambient_noise(source,1.2)
         print("listening.")
         audio = r.listen(source) 
-        text = r.recognize_google(audio)
-        text = text.lower()
-        return text
+        text=""
+        try:
+            text = r.recognize_google(audio)
+            text = text.lower()
+            return text
+        except sr.UnknownValueError:
+            print("Sorry i did not hear your voice properly. can you please repeat it again ")
+            speak("Sorry i did not hear your voice properly. can you please repeat it again ")
+            return voice()
+            
+    
+            
 
-r = sr.Recognizer()
+
 
 print("hello sir, good " + time() +" ,i am sofia. your personal assistent")
 speak("hello sir, good " + time() +" ,i am sofia. your personal assistent")
@@ -98,7 +106,7 @@ if "information" in voices:
     else:
         print("geting information about {} from wikipedia".format(info))
         speak("geting information about {} from wikipedia".format(info))
-        wiki_data = wikipedia.summary(info, sentences=2)
+        wiki_data = wikipedia.summary(info, sentences=5)
         print(wiki_data)
         speak(wiki_data)        
           

@@ -23,7 +23,6 @@ intro_list= [
   "What’s up with you, old soul? Wanna chat?",
   "Welcome to the club, boss!",
   "Hey mistaa, how do you do?",
-  "Namaste! How long has it been, dost?",
   "Hey Einstein, still cracking the old theory?",
   "What’s smokin’? Tell me everything!",
   "Hey sir! What’s the latest buzz in your world?",
