@@ -110,3 +110,21 @@ evening_data = [
   "Follow the rhythm of your heart, Heart takes you to the destination, Where your goodness dwells, Have a happy evening",
   "",
 ]
+
+voice_error = [
+  "Sorry, I didn’t understand. Could you say that again, please? ",
+  "Sorry, I didn’t catch that. Could you repeat a little louder, please? ",
+  "I don’t know that word, could you please tell me what it means?",
+  "I can’t hear you very well. Could you speak up, please? ",
+  "Sorry, English is not my first language. Would you mind repeating that once more?",
+  "Sorry, my English is not that great. Would you mind speaking more slowly?",
+  "Sorry, I’m afraid I don’t follow you.",
+  "Excuse me, could you repeat once more",
+  "I’m sorry, I don’t understand. Could you say it again?",
+  "I’m sorry, I didn’t catch that. Would you mind speaking more slowly?",
+  "I’m confused. Could you tell me again?",
+  "I’m sorry, I didn’t understand. Could you repeat a little louder, please?",
+  "I didn’t hear you. Please could you tell me again?",
+  "I can’t make head nor tail of what you’re saying.can you please tell me more spacific",
+  "Sorry i did not hear your voice properly. can you please repeat it again ",
+]

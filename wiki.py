@@ -1,5 +1,4 @@
 from selenium import webdriver
-import wikipedia 
 
 class wiki_data():
     def __init__(self):

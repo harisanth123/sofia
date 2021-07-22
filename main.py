@@ -47,17 +47,16 @@ def voice():
             text = text.lower()
             return text
         except sr.UnknownValueError:
-            print("Sorry i did not hear your voice properly. can you please repeat it again ")
-            speak("Sorry i did not hear your voice properly. can you please repeat it again ")
+            v_error = random.choice(voice_error)
+            print(v_error)
+            speak(v_error)
             return voice()
             
-    
-            
+print("hello, good " + time() +" ,i am sofia.")
+speak("hello, good " + time() +" ,i am sofia.")
+print("what can i do for you??")
+speak("what can i do for you??")
 
-
-
-print("hello sir, good " + time() +" ,i am sofia. your personal assistent")
-speak("hello sir, good " + time() +" ,i am sofia. your personal assistent")
 
 voices = voice()
 
