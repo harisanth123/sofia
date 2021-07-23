@@ -1,6 +1,7 @@
 from sofia_voice_recognizeing import *
 from sofia_utils import *
 from sofia_operation import *
+from sofia_data import *
 import wikipedia
 def sofia_intro():
     voices = voice()
