@@ -1,52 +1,14 @@
-import pyttsx3 as p
-import speech_recognition as sr
 import random
 import wikipedia 
 
+from opp import *
 from utils import *
-
+from voice_recognizeing import *
 from random import choice
-from wiki import *
-from yt import *
-from news import *
 from data import *
-from joke import *
 
-
-
-engine = p.init()
-rate = engine.getProperty('rate')
-engine.setProperty('rate',175)
-voices = engine.getProperty('voices')
-engine.setProperty('voice',voices[0].id)
-
-def speak(text):
-    engine.say(text)
-    engine.runAndWait()
-
-def voice():
-    r = sr.Recognizer()
-    with sr.Microphone() as source:
-        r.energy_threshold=10000
-        r.adjust_for_ambient_noise(source,1.2)
-        print("listening.")
-        audio = r.listen(source) 
-        text=""
-        try:
-            text = r.recognize_google(audio)
-            text = text.lower()
-            return text
-        except sr.UnknownValueError:
-            v_error = random.choice(voice_error)
-            print(v_error)
-            speak(v_error)
-            return voice()
-            
 print("hello sir, good " + time() +" ,i am sofia.")
 speak("hello sir, good " + time() +" ,i am sofia.")
-print("what can i do for you??")
-speak("what can i do for you??")
-
 
 voices = voice()
 
@@ -110,7 +72,7 @@ elif "news" in voices:
 elif "joke" or "jokes" in voices:
     print("ok sir let me find a joke for you...")
     speak("ok sir let me find a joke for you...")
-    arr=joke()
+    arr=jokes()
     print(arr[0])
     speak(arr[0])
     print(arr[1])
