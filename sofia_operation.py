@@ -37,7 +37,7 @@ def get_news():
     return ar
     
 
-class wiki_data():
+class wiki_acess():
     def __init__(self):
         self.driver = webdriver.Chrome(executable_path="C:\chromedriver_win32\chromedriver.exe")  
         self.driver.maximize_window()
