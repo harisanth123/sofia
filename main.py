@@ -3,8 +3,8 @@ from sofia_voice import *
 from sofia_voice_recognizeing import *
 from sofia_utils import *
 
-print("hello sir, good " + time() +" ,i am sofia.")
-speak("hello sir, good " + time() +" ,i am sofia.")
+print("good " + time() +" sir. i am sofia.")
+speak("good " + time() +" sir. i am sofia.")
 
 intro = sofia_intro()
 
