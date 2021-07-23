@@ -2,7 +2,7 @@ import pyttsx3 as p
 import speech_recognition as sr
 import random
 
-from data import *
+from sofia_data import *
 
 engine = p.init()
 rate = engine.getProperty('rate')

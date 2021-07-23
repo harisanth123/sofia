@@ -1,7 +1,7 @@
 import datetime
 import random
 
-from data import *
+from sofia_data import *
 
 def time():
 
