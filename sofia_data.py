@@ -1,4 +1,4 @@
-
+from sofia_utils import *
 intro_list= [
   "Hi there, sir looking forward to see you",
   "Greetings sir, welcome back",
@@ -17,12 +17,12 @@ intro_list= [
   "How are you feeling today sir?",
   "Welcome back sir",
   "Hi, mister! What is going on?",
-  "Top of the morning to ya! Wass es going on?",
+  "Top of the "+ time() +" to you! What's going on?",
   "Hello-hello! Who’s there? It’s me sofia talking",
   "Knock knock…who is there? It’s me, sofia!",
   "What’s up with you, old soul? Wanna chat?",
   "Welcome to the club, boss!",
-  "Hey mistaa, how do you do?",
+  "Hey mister, how do you do?",
   "Hey Einstein, still cracking the old theory?",
   "What’s smokin’? Tell me everything!",
   "Hey sir! What’s the latest buzz in your world?",
