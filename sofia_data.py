@@ -124,6 +124,6 @@ voice_error = [
   "I’m confused. Could you tell me again?",
   "I’m sorry, I didn’t understand. Could you repeat a little louder, please?",
   "I didn’t hear you. Please could you tell me again?",
-  "I can’t make head nor tail of what you’re saying.can you please tell me more spacific",
+  "I can’t make head nor tail of what you’re saying. can you please tell me more spacific",
   "Sorry i did not hear your voice properly. can you please repeat it again ",
 ]

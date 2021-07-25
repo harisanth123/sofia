@@ -41,15 +41,25 @@ def sofia_process():
                 wiki_data=wikipedia.summary(info, sentences=5)
                 print(wiki_data)
                 speak(wiki_data)
+            
             except  wikipedia.exceptions.DisambiguationError as e:
                 print("multiple items founded. please select one")
                 speak("multiple items founded. please select one")
                 print(e.options)
-                speak(e.options)
                 opp_wiki = voice()
                 wiki_data=wikipedia.summary(opp_wiki, sentences=5)
                 print(wiki_data)
                 speak(wiki_data)
+            
+            except wikipedia.exceptions.PageError as e:
+                print(e)
+                speak(e)
+            
+            except wikipedia.exceptions.Timeout:
+                print("Timeout occurred")
+                speak("Timeout occurred")
+            
+                 
     
     elif "YouTube" and "video" in voices:
         print("which vedio do you need to watch?")
