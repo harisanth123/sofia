@@ -31,16 +31,26 @@ def sofia_process():
         if wiki == "yes":
             print("searching {} in wikipedia".format(info))
             speak("searching {} in wikipedia".format(info))
-            
             assist=wiki_acess()
             assist.get_info(info)
+            
         else:
             print("geting information about {} from wikipedia".format(info))
             speak("geting information about {} from wikipedia".format(info))
-            wiki_data = wikipedia.summary(info, sentences=5)
-            print(wiki_data)
-            speak(wiki_data)        
-          
+            try:
+                wiki_data=wikipedia.summary(info, sentences=5)
+                print(wiki_data)
+                speak(wiki_data)
+            except  wikipedia.exceptions.DisambiguationError as e:
+                print("multiple items founded. please select one")
+                speak("multiple items founded. please select one")
+                print(e.options)
+                speak(e.options)
+                opp_wiki = voice()
+                wiki_data=wikipedia.summary(opp_wiki, sentences=5)
+                print(wiki_data)
+                speak(wiki_data)
+    
     elif "YouTube" and "video" in voices:
         print("which vedio do you need to watch?")
         speak("which vedio do you need to watch?")

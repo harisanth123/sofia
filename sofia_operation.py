@@ -53,6 +53,7 @@ class wiki_acess():
         enter.click()
         while(True):
             pass
+        
 
 
         
