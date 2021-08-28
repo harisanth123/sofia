@@ -86,4 +86,6 @@ def sofia_process():
         speak(arr[0])
         print(arr[1])
         speak(arr[1])
-
+    else:
+        print("unable to find data")
+        speak("unable to find data ")
