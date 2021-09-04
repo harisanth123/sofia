@@ -87,5 +87,6 @@ def sofia_process():
         print(arr[1])
         speak(arr[1])
     else:
-        print("unable to find data")
-        speak("unable to find data ")
+        unable=random.choice(voice_NO)
+        print(unable)
+        speak(unable)

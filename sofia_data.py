@@ -127,3 +127,19 @@ voice_error = [
   "I can’t make head nor tail of what you’re saying. can you please tell me more spacific",
   "Sorry i did not hear your voice properly. can you please repeat it again ",
 ]
+
+voice_NO = [
+  "Sounds great, but I can’t commit.",
+  "It’s not feasible for me to take this on",
+  "Let me think about it and I’ll get back to you",
+  "I’ve got too much on my plate right now",
+  "Bandwidth is low, so I won’t be able to make it work",
+  "I’m not taking on new things",
+  "Another time might work",
+  "I’m not sure I’m the best for it",
+  "I don’t think I’m the right person for that",
+  "I wish I could make it work",
+  "No thanks, I won’t be able to make it",
+  "Apologies, but I can’t make it",
+  "I’d love to — but can’t.",
+]
