@@ -30,13 +30,20 @@ class yt_data():
 
 def get_news():
     key = os.environ.get('news_key')
-    api_address= ('https://newsapi.org/v2/top-headlines?country=us&apiKey=' + key )
-    json_data = requests.get(api_address).json()
-    ar=[]
-    for i in range(3):
-      ar.append("Number "+str(i+1) +", "+ json_data["articles"][i]["title"]+".")
-    return ar
-    
+    url="https://newsapi.org/v2/top-headlines?country=in&apiKey="+key
+    news = requests.get(url).json()
+
+    articles = news["articles"]
+
+    my_articles = []
+    my_news = ""
+
+    for article in articles:
+        my_articles.append(article["title"])
+    for i in range(10):
+        my_news = my_news + str(i+1) +". " + my_articles[i]+"\n"
+    print (my_news)
+        
 
 class wiki_acess():
     def __init__(self):

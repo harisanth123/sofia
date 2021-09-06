@@ -74,9 +74,9 @@ def sofia_process():
         print("sure sir, i will get for you ")
         speak("sure sir, i will get for you ")
         arr=get_news()
-        for i in range(len(arr)):
-            print(arr[i])
-            speak(arr[i])
+        
+        
+        
 
     elif "joke" or "jokes" in voices:
         print("ok sir let me find a joke for you...")
