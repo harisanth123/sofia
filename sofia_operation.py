@@ -42,7 +42,7 @@ def get_news():
         my_articles.append(article["title"])
     for i in range(10):
         my_news = my_news + str(i+1) +". " + my_articles[i]+"\n"
-    print (my_news)
+    print(my_news)
         
 
 class wiki_acess():

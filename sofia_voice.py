@@ -1,3 +1,4 @@
+from datetime import MAXYEAR
 from sofia_voice_recognizeing import *
 from sofia_utils import *
 from sofia_operation import *
@@ -73,7 +74,8 @@ def sofia_process():
     elif "news" in voices:
         print("sure sir, i will get for you ")
         speak("sure sir, i will get for you ")
-        arr=get_news()
+        news=get_news()
+    
         
         
         
