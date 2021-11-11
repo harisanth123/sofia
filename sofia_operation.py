@@ -15,7 +15,7 @@ def jokes():
 
 class yt_data():
     def __init__(self):
-        self.driver = webdriver.Chrome(executable_path="C:\chromedriver_win32\chromedriver.exe")  
+        self.driver = webdriver.Chrome(executable_path="C:\chromedriver.exe")  
         self.driver.maximize_window()
     
     def get_vedio(self,query):
