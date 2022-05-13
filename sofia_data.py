@@ -62,6 +62,7 @@ morning_data=[
 afternoon_data =[
   "Have a good afternoon and a great day! sir",
   "I am always thinking about you. Have a great afternoon sir",
+  "good afternoon",
   "You are as bright as the afternoon sun",
   "The afternoon is when the day starts to slow down. Enjoy yourself!",
   "Enjoy this time of day and the blessings that it brings. ",
